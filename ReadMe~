@@ -1,0 +1,54 @@
+So, this documentation kinda walks you through what each scripts do. 
+MAke sure you always eun these scripts on a small subset of data before running it on the original dataset, cause collecting data is difficult y'all!!!
+
+In case of questions, message me in WhatsApp or Facebook or GoogleHangouts. 
+Take care of Baxter, he needs some rest.
+
+**************************NOTE*************************************
+
+After collecting baxter demonstrations, run 
+python sort_me_if_you_can_VERSION2.py
+python jointAngles_remove_unwanted.py
+python jointAngles.py
+#TO LABEL
+python can_you_label_me_no_see.py
+
+**************************END OF NOTE***********************
+
+can_you_label_me_no_see.py:
+		This script labels all the trajectories that you have collected. The labels are in label.pdf. The only input you have to give is the label number(Ex-1 if your trajectories are "pouring") and the start and end number of trajectories(Ex: 13100Dec01 - 13250Dec22).
+
+
+check_I_am_dumper.py:
+		Dumps images,labels and joint angles files into a .hdf5 file for network training. Be mindful of the directory path
+
+copy_files.py:
+		Copies files recursively from source to dest 
+
+
+count_label.py:
+		Counts labels and it's frequency in your dataset. USeful if you want to know number of trajectories in respective classes. 
+
+create_subset.py:
+	   Creates subset of your data set for 60 timesteps. PLEASE follow the comments carefully or rwrite this code or contact me at 412-961-5726
+
+image_disp.py:
+	Just displays croppedimages, nothing interesting!
+
+jointAngles.py:
+         Converts the Baxter jointAngles into dictionary data type and stores them. Pretty useful format if you ask me. 
+
+jointAngles_remove_unwanted.py:
+	 Lol!! When Baxter got updated, we had newinformation on jointAngles which we decided was not necesaary. So, had to write this script that would weed out unnecesary files.
+
+plot_trajecotries.py:
+	 The name says it all! Still read through the code
+
+sort_me_if_you_can_VERSION2.py:
+	Whenever you collect data, it is stores human demonstrations and corresponding robot demonstrations separately. This script puts them all into one folder named as 
+for example :12350Dec24
+		|___HD 12350Dec24
+			|__<sub_directories>
+		|
+		|__RD 12350Dec24
+			|_<sub_directories>
