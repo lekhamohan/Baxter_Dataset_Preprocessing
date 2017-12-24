@@ -7,7 +7,7 @@ Take care of Baxter, he needs some rest.
 **************************NOTE*************************************
 
 After collecting baxter demonstrations, run 
-python sort_me_if_you_can_VERSION2.py
+python sort_HD_RD_Demo.py
 python jointAngles_remove_unwanted.py
 python jointAngles.py
 #TO LABEL

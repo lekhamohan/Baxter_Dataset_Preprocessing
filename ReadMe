@@ -7,19 +7,19 @@ Take care of Baxter, he needs some rest.
 **************************NOTE*************************************
 
 After collecting baxter demonstrations, run 
-python sort_me_if_you_can_VERSION2.py
+python sort_HD_RD_Demo.py
 python jointAngles_remove_unwanted.py
 python jointAngles.py
 #TO LABEL
-python can_you_label_me_no_see.py
+python label_me.py
 
 **************************END OF NOTE***********************
 
-can_you_label_me_no_see.py:
+label_me.py:
 		This script labels all the trajectories that you have collected. The labels are in label.pdf. The only input you have to give is the label number(Ex-1 if your trajectories are "pouring") and the start and end number of trajectories(Ex: 13100Dec01 - 13250Dec22).
 
 
-check_I_am_dumper.py:
+hdf5_dumper.py:
 		Dumps images,labels and joint angles files into a .hdf5 file for network training. Be mindful of the directory path
 
 copy_files.py:
@@ -44,7 +44,7 @@ jointAngles_remove_unwanted.py:
 plot_trajecotries.py:
 	 The name says it all! Still read through the code
 
-sort_me_if_you_can_VERSION2.py:
+sort_HD_RD_Demo.py:
 	Whenever you collect data, it is stores human demonstrations and corresponding robot demonstrations separately. This script puts them all into one folder named as 
 for example :12350Dec24
 		|___HD 12350Dec24
