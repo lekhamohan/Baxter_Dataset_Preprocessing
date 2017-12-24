@@ -59,7 +59,6 @@ def Plot(a,name):
     return plt
 
 sub_dirs = label_dirs[0:5]
-
 for d in sub_dirs:
      dirs = os.path.dirname(d)
      files_left = glob.glob(dirs+"/RD "+os.path.basename(dirs)+"/fk/left/*.txt")  
